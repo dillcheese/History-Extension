@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<style>
+    body {
+      min-width: 220px;
+    }
+
+    button {
+        display: flex;
+        margin: auto;
+        width: 200px;
+        margin-top: 5px;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 16px;
+        justify-content: center;
+    }
+  
+</style>
+
+  <head>
+    <title>Export History Extension</title>
+  </head>
+  <body>
+    <h1>Export History</h1>
+    <form>
+      <label for="length">Export History Length:</label>
+      <select id="length" name="length">
+        <option value="1">Last 24 hours</option>
+        <option value="7">Last 7 days</option>
+        <option value="30">Last 30 days</option>
+        <option value="all">All History</option>
+      </select>
+      <br>
+      <label for="automate">Auto Export:</label>
+      <input type="checkbox" id="autoExport" name="autoExport" value="autoExport">
+      <br>
+      <label for="rate">Auto Export Interval:</label>
+      <select id="rate" name="rate">
+        <option value="Daily">Daily</option>
+        <option value="Weekly">Weekly</option>
+        <option value="Monthly">Monthly</option>
+      </select>
+      <br>
+      <div class="button-container">
+        <!--
+      <button type="button" onclick="exportHistory('csv')">Export as CSV</button>
+      <button type="button" onclick="exportHistory('json')">Export as JSON</button>
+      <button type="button" onclick="exportHistory('txt')">Export as TXT</button>
+      -->
+      <button type="button" id="exportCSV">Export as CSV</button>
+      <button type="button" id="exportJSON">Export as JSON</button>
+      <button type="button" id="exportTXT">Export as TXT</button>
+      </div>
+
+    </form>
+    <script src="export.js"></script>
+  </body>
+
+</html>
+
